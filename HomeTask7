@@ -1,0 +1,80 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+        length("doomshop sixset");
+        System.out.println(revers("doomshop sixset"));
+        System.out.println(polindrom("doomshop sixset"));
+        upperCase("doomshop sixset");
+        replace("doomshop sixset", "g", "d");
+        withoutSpace("doomshop", "sixset");
+        System.out.println(split("doomshop sixset", "o"));
+        firstLetters("doomshop sixset", 1,"d");
+        charPos("doomshop sixset", "o");
+    }
+
+    private static void firstLetters(String string, int i, String string2) {
+    }
+
+    public static int length(String text) {
+        System.out.println(text.length());
+        return text.length();
+    }
+
+    public static String revers(String s) {
+        String s1 = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            s1 += s.charAt(i);
+        }
+
+        return s1;
+    }
+
+    public static String polindrom(String s) {
+        String s1 = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            s1 += s.charAt(i);
+        }
+        if (s1.equals(s)) {
+            System.out.println("It's polindrom");
+        } else {
+            System.out.println("it isn't polindrom");
+        }
+
+        return "";
+
+    }
+
+    public static String upperCase(String text) {
+        System.out.println(text.toUpperCase());
+        return text.toUpperCase();
+    }
+
+    public static String replace(String a, String c, String b) {
+        System.out.println(a.replace(b, c));
+
+        return "";
+    }
+
+
+    public static String withoutSpace(String writeFirstTxt, String writeSecondTxt) {
+        System.out.println(writeFirstTxt.concat(writeSecondTxt));
+        return writeFirstTxt.concat(writeSecondTxt);
+    }
+
+    public static String[] split(String a, String s) {
+        return a.split(s);
+    }
+
+    public static String firstLetters(String a, String FewLatters,int c) {
+        if (a.equals(a.replace(a.substring(c),FewLatters))) {
+            System.out.println("перші букви однакові");
+        } else {
+            System.out.println("перші букви не однакові");
+        }
+        return "...";
+    }
+    public static int charPos(String a,String b){
+        
+        for(int i =0;i>=a.length();i++){System.out.println( a.indexOf(b));}
+        
+        return a.indexOf(b);}
+}
